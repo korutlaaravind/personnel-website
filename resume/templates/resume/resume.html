@@ -1,0 +1,26 @@
+{% extends 'resume/base.html' %}
+
+{% block content %}
+<h2>Professional Experience</h2>
+{% for experience in experiences %}
+<div class="card mb-3">
+    <div class="card-body">
+        <h5>{{ experience.title }} at {{ experience.company }}</h5>
+        <p class="text-muted">{{ experience.start_date }} - {% if experience.end_date %}{{ experience.end_date }}{% else %}Present{% endif %}</p>
+        <p>{{ experience.description }}</p>
+    </div>
+</div>
+{% endfor %}
+
+<h2 class="mt-5">Education</h2>
+{% for edu in education %}
+<div class="card mb-3">
+    <div class="card-body">
+        <h5>{{ edu.degree }}</h5>
+        <h6>{{ edu.institution }}</h6>
+        <p>{{ edu.field_of_study }}</p>
+        <p class="text-muted">{{ edu.start_date }} - {{ edu.end_date }}</p>
+    </div>
+</div>
+{% endfor %}
+{% endblock %}

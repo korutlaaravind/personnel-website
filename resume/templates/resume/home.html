@@ -1,0 +1,23 @@
+{% extends 'resume/base.html' %}
+
+{% block content %}
+<div class="jumbotron">
+    <h1 class="display-4">Aravind Korutla</h1>
+    <p class="lead">Microsoft Azure certified Data Analyst</p>
+    <hr class="my-4">
+    <p>Expertise in data analytics and machine learning rendering actionable insights and data-driven decisions.</p>
+</div>
+
+<section class="my-5">
+    <h2>Recent Experience</h2>
+    {% for experience in experiences %}
+    <div class="card mb-3">
+        <div class="card-body">
+            <h5 class="card-title">{{ experience.title }}</h5>
+            <h6 class="card-subtitle mb-2 text-muted">{{ experience.company }}</h6>
+            <p class="card-text">{{ experience.description }}</p>
+        </div>
+    </div>
+    {% endfor %}
+</section>
+{% endblock %}

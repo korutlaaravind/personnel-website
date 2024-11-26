@@ -1,0 +1,17 @@
+{% extends 'resume/base.html' %}
+
+{% block content %}
+<h2>Projects</h2>
+{% for project in projects %}
+<div class="card mb-3">
+    <div class="card-body">
+        <h5 class="card-title">{{ project.title }}</h5>
+        <p class="card-text">{{ project.description }}</p>
+        <p class="card-text"><small class="text-muted">Technologies: {{ project.technologies }}</small></p>
+        {% if project.git_url %}
+        <a href="{{ project.git_url }}" class="btn btn-primary" target="_blank">View Project</a>
+        {% endif %}
+    </div>
+</div>
+{% endfor %}
+{% endblock %}

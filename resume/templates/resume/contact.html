@@ -1,0 +1,17 @@
+{% extends 'resume/base.html' %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <h2>Contact Information</h2>
+        <div class="card">
+            <div class="card-body">
+                <p><strong>Email:</strong> {{ email }}</p>
+                <p><strong>Phone:</strong> {{ phone }}</p>
+                <p><strong>Location:</strong> {{ location }}</p>
+                <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/aravind-korutla-9a348b1bb/">Profile</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
